@@ -100,7 +100,7 @@ export default function ResidentialPage() {
         </div>
       </section>
 
-      {/* IMAGE CARDS GRID SECTION - First Row */}
+      {/* IMAGE CARDS GRID SECTION */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -111,30 +111,37 @@ export default function ResidentialPage() {
             viewport={{ once: true }}
             className="text-center mb-12 relative"
           >
-            {/* Image in Top Right Corner */}
-            <div className="absolute -top-10 -right-6 z-10">
-              <Image
-                src="/images/truck.png"
-                alt="Decoration"
-                width={250}
-                height={180}
-                className="object-contain"
-              />
+            {/* Decorative Image - Responsive */}
+            <div className="flex justify-end lg:justify-end mb-4 lg:mb-0">
+              <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 h-24 sm:h-28 md:h-32 lg:h-36">
+                <Image
+                  src="/images/truck.png"
+                  alt="Decoration"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 pr-32">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Recent Projects
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto pr-32">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Award-winning residential transformations across Brisbane
             </p>
           </motion.div>
 
           {/* First Row of Images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/Image1.jpg"
                   alt="Primrose Terrace"
@@ -143,15 +150,21 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* <h3 className="text-xl font-bold">Primrose Terrace</h3>
-                  <p className="text-sm text-white/80">Red Hill, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">Primrose Terrace</h3>
+                  <p className="text-xs sm:text-sm text-white/80">Red Hill, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 2 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/Image2.jpg"
                   alt="Hetherington Street"
@@ -160,15 +173,21 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* <h3 className="text-xl font-bold">Hetherington Street</h3>
-                  <p className="text-sm text-white/80">Herston, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">Hetherington Street</h3>
+                  <p className="text-xs sm:text-sm text-white/80">Herston, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 3 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/Image3.jpg"
                   alt="Glenrosa Street"
@@ -177,21 +196,27 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* <h3 className="text-xl font-bold">Glenrosa Street</h3>
-                  <p className="text-sm text-white/80">Red Hill, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">Glenrosa Street</h3>
+                  <p className="text-xs sm:text-sm text-white/80">Red Hill, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          {/* Spacing between rows - mt-16 creates large gap */}
-          <div className="mt-16"></div>
+          {/* Spacing between rows */}
+          <div className="mt-12 sm:mt-16"></div>
 
           {/* Second Row of Images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Card 4 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/images7.jpg"
                   alt="New Farm Residence"
@@ -200,15 +225,21 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* <h3 className="text-xl font-bold">New Farm Residence</h3>
-                  <p className="text-sm text-white/80">New Farm, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">New Farm Residence</h3>
+                  <p className="text-xs sm:text-sm text-white/80">New Farm, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 5 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/images6.jpg"
                   alt="Hamilton Garden"
@@ -217,15 +248,21 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* <h3 className="text-xl font-bold">Hamilton Garden</h3>
-                  <p className="text-sm text-white/80">Hamilton, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">Hamilton Garden</h3>
+                  <p className="text-xs sm:text-sm text-white/80">Hamilton, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 6 */}
-            <div className="group cursor-pointer">
-              <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/Home2.jpg"
                   alt="Ascot Estate"
@@ -234,11 +271,11 @@ export default function ResidentialPage() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  {/* {/* <h3 className="text-xl font-bold">Ascot Estate</h3> */}
-                  {/* <p className="text-sm text-white/80">Ascot, Brisbane</p> */}
+                  <h3 className="text-lg sm:text-xl font-bold">Ascot Estate</h3>
+                  <p className="text-xs sm:text-sm text-white/80">Ascot, Brisbane</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

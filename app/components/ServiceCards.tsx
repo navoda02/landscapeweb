@@ -1,77 +1,3 @@
-// "use client";
-
-// import Image from "next/image";
-
-// export default function ServiceCards() {
-//   const services = [
-//     {
-//       title: "Lawn Care & Maintenance",
-//       description: "We provide regular mowing, edging, and fertilization to keep your lawn lush, healthy, and vibrant year-round.",
-//       image: "/images/ResidentialHome.jpg",
-//       alt: "Lawn care services"
-//     },
-//     {
-//       title: "Landscape Design & Installation",
-//       description: "Our team creates custom landscape designs that transform your outdoor space, from plant selection to hardscaping features.",
-//       image: "/images/CommertialHome.jpg",
-//       alt: "Landscape design services"
-//     },
-//     {
-//       title: "Flower Bed Design & Maintenance",
-//       description: "We create and maintain vibrant flower beds, selecting the best plants for your space to ensure colorful, seasonal blooms year-round.",
-//       image: "/images/Home2.jpg",
-//       alt: "Flower bed services"
-//     }
-//   ];
-
-//   return (
-//     <section className="py-20 bg-white">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-12">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-//             Our Landscaping Services
-//           </h2>
-//           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-//             At ScapeX, we offer a wide range of expert landscaping services tailored to enhance your outdoor space.
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {services.map((service, index) => (
-//             <div
-//               key={index}
-//               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
-//             >
-//               {/* Image Container */}
-//               <div className="relative h-56 w-full overflow-hidden bg-gray-200">
-//                 <Image
-//                   src={service.image}
-//                   alt={service.alt}
-//                   fill
-//                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-//                 />
-//               </div>
-              
-//               {/* Content */}
-//               <div className="p-6 text-center">
-//                 <div className="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center mx-auto mb-4">
-//                   <span className="text-white text-xl font-bold">{index + 1}</span>
-//                 </div>
-//                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-//                   {service.title}
-//                 </h3>
-//                 <p className="text-gray-600">
-//                   {service.description}
-//                 </p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import Image from "next/image";
@@ -82,19 +8,19 @@ export default function Services() {
 
   const services = [
     {
-      title: "Residential",
-      description: "Beautiful gardens and outdoor living spaces for your home",
-      image: "/images/ResidentialHome.jpg",
-      link: "/residential"
-    },
-    {
-      title: "Commercial",
+      title: "COMMERCIAL",
       description: "Professional landscaping for businesses and offices",
       image: "/images/CommertialHome.jpg",
       link: "/commercial"
     },
     {
-      title: "Nature Play",
+      title: "RESIDENTIAL",
+      description: "Beautiful gardens and outdoor living spaces for your home",
+      image: "/images/ResidentialHome.jpg",
+      link: "/residential"
+    },
+    {
+      title: "NATURE PLAY",
       description: "Natural play spaces that inspire creativity",
       image: "/images/Home2.jpg",
       link: "/nature-play"
@@ -106,47 +32,52 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20" style={{ backgroundColor: '#5bb450' }}>
+    <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Our Services
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-800 mb-3">
+            Superior landscaping with a difference.
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            We provide complete landscaping solutions for every need
-          </p>
+          <div className="w-20 h-1 bg-green-600 mx-auto mb-4"></div>
+          <p className="text-lg text-gray-500 italic">Go outdoors to live.</p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid - Square Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <div
               key={index}
               onClick={() => handleNavigation(service.link)}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2"
+              className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 aspect-square"
             >
-              {/* Image Container */}
-              <div className="relative h-48 w-full">
+              {/* Image Container - Fills entire square */}
+              <div className="absolute inset-0 w-full h-full">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                {/* Dark gradient overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
               </div>
               
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              {/* Content - Positioned at bottom of square */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-2xl md:text-3xl font-bold tracking-wider">
                   {service.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-sm text-white/80 mt-1">
                   {service.description}
                 </p>
-                <div className="mt-4 text-green-600 font-medium hover:text-green-700 transition-colors">
-                  Learn More →
+                {/* Arrow indicator */}
+                <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
+                  <span className="text-white/70 text-sm">Learn More</span>
+                  <span className="text-white text-xl font-bold group-hover:translate-x-2 transition-transform duration-300">
+                    →
+                  </span>
                 </div>
               </div>
             </div>

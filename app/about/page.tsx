@@ -37,7 +37,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base/sm:text-lg/md:text-xl text-white/90"
+              className="text-base sm:text-lg md:text-xl text-white/90"
             >
               Based In Brisbane
             </motion.p>
@@ -47,13 +47,15 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <div className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start relative">
+            
+            {/* Left Side - Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative h-96 lg:h-[450px] rounded-lg overflow-hidden shadow-xl"
+              className="relative h-80 sm:h-96 lg:h-[450px] rounded-lg overflow-hidden shadow-xl"
             >
               <Image
                 src="/images/Home3.jpg"
@@ -63,17 +65,18 @@ export default function AboutPage() {
               />
             </motion.div>
 
+            {/* Right Side - Content */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative pb-20 sm:pb-24 md:pb-0"
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 Founded in 2010, ScapeX has been a family-owned business, committed to creating sustainable 
                 and beautiful gardens that last. Based in Brisbane, we specialize in custom garden design, 
                 landscaping, and maintenance, delivering personalized services that suit every client's 
@@ -81,19 +84,26 @@ export default function AboutPage() {
                 evolve, blending traditional techniques with modern creativity to bring your garden dreams 
                 to life.
               </p>
-              
-              {/* Image at Bottom Right Corner - Further below the text */}
-              <div className="absolute -bottom-57 -right-6 z-10">
-                <Image
-                  src="/images/house icon.png"
-                  alt="Decoration"
-                  width={300}
-                  height={140}
-                  className="object-contain"
-                />
-              </div>
             </motion.div>
           </div>
+
+          {/* Decorative Image - Responsive */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex justify-center lg:justify-end mt-6 lg:mt-0"
+          >
+            <div className="relative w-40 sm:w-48 md:w-56 lg:w-64 h-20 sm:h-24 md:h-28 lg:h-32">
+              <Image
+                src="/images/house icon.png"
+                alt="Decoration"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -118,7 +128,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden">
                 <Image
                   src="/images/Home2.jpg"
                   alt="Mark Thompson"
@@ -126,9 +136,9 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 text-center mb-1">Mark Thompson</h3>
-              <p className="text-green-700 text-center font-semibold text-sm mb-3">Founder & Head Gardener</p>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 text-center mb-1">Mark Thompson</h3>
+              <p className="text-green-700 text-center font-semibold text-xs sm:text-sm mb-3">Founder & Head Gardener</p>
+              <p className="text-gray-600 text-center text-xs sm:text-sm leading-relaxed">
                 With over 40 years of experience, Mark founded ScapeX. His expertise in horticulture and passion for sustainable garden design ensures every project is built to last.
               </p>
             </motion.div>
@@ -141,7 +151,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden">
                 <Image
                   src="/images/ResidentialHome.jpg"
                   alt="Sarah Thompson"
@@ -149,9 +159,9 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 text-center mb-1">Sarah Thompson</h3>
-              <p className="text-green-700 text-center font-semibold text-sm mb-3">Project Manager</p>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 text-center mb-1">Sarah Thompson</h3>
+              <p className="text-green-700 text-center font-semibold text-xs sm:text-sm mb-3">Project Manager</p>
+              <p className="text-gray-600 text-center text-xs sm:text-sm leading-relaxed">
                 As a key team member, Sarah combines creative design with a practical approach. She manages projects from start to finish, ensuring each garden reflects the client's vision.
               </p>
             </motion.div>
@@ -164,7 +174,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden">
                 <Image
                   src="/images/Home2.jpg"
                   alt="Tom Harris"
@@ -172,9 +182,9 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 text-center mb-1">Tom Harris</h3>
-              <p className="text-green-700 text-center font-semibold text-sm mb-3">Senior Landscaper</p>
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 text-center mb-1">Tom Harris</h3>
+              <p className="text-green-700 text-center font-semibold text-xs sm:text-sm mb-3">Senior Landscaper</p>
+              <p className="text-gray-600 text-center text-xs sm:text-sm leading-relaxed">
                 Tom has been part of the ScapeX team for 12 years. He specialises in landscaping and maintenance, ensuring that gardens remain healthy and vibrant throughout the year.
               </p>
             </motion.div>

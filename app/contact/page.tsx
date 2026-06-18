@@ -31,7 +31,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/Home3.jpg"
-            alt="Residential Services"
+            alt="Contact Us"
             fill
             className="object-cover"
             priority
@@ -41,31 +41,31 @@ export default function ContactPage() {
               
         {/* Text at Bottom */}
         <div className="relative h-full flex flex-col justify-end pb-20 pl-8 sm:pl-12 md:pl-16 z-10">
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4"
-                >
-                  Contact US
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-base sm:text-lg md:text-xl text-white/90"
-                >
-                  Based In Brisbane
-                </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4"
+          >
+            Contact Us
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base sm:text-lg md:text-xl text-white/90"
+          >
+            Based In Brisbane
+          </motion.p>
         </div>
       </section>  
 
-      {/* Contact Section - Swapped Sides */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Section */}
+      <section className="py-20 bg-white overflow-visible">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* Left Side - Contact Info (Moved from Right to Left) */}
+            {/* Left Side - Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -109,26 +109,27 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
-            {/* Right Side - Contact Form (Moved from Left to Right) */}
+            {/* Right Side - Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative overflow-visible"
             >
-              {/* Image in front of Details text */}
-              <div className="absolute -top-8 -right-6 z-10">
-                <Image
-                  src="/images/tree icon.png"
-                  alt="Decoration"
-                  width={300}
-                  height={180}
-                  className="object-contain"
-                />
+              {/* Tree Icon - Responsive */}
+              <div className="flex justify-end mb-4">
+                <div className="relative w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36">
+                  <Image
+                    src="/images/tree icon.png"
+                    alt="Decoration"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 pr-24">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Details.
               </h2>
               

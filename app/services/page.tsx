@@ -53,9 +53,9 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base/sm:text-lg/md:text-xl text-white/90"
+            className="text-base sm:text-lg md:text-xl text-white/90"
           >
-            Based In Brisbane
+            Based In Darwin
           </motion.p>
       </div>
     </section>

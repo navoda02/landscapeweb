@@ -32,18 +32,24 @@ export default function Header() {
         <div className="flex justify-between items-center h-20 md:h-24">
           
           {/* Logo with Image - Links to Home */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center group">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
+              {/* Uncomment when logo image is available */}
               {/* <Image
                 src="/images/logo.png"
-                alt="ScapeX Logo"
+                alt="ScapeXNT Logo"
                 fill
                 className="object-contain"
               /> */}
             </div>
-            <h1 className="text-xl md:text-2xl font-bold text-green-800 ml-2">
-              ScapeX
-            </h1>
+            <div className="ml-2 flex items-baseline">
+              <span className="text-xl md:text-2xl font-bold text-green-800 transition-colors duration-300 group-hover:text-green-600">
+                Scape
+              </span>
+              <span className="text-xl md:text-2xl font-bold text-green-800 transition-colors duration-300 group-hover:text-green-600">
+                XNT
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Menu - Horizontal */}
@@ -73,6 +79,7 @@ export default function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-gray-700 hover:text-green-700 transition-colors"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

@@ -39,7 +39,7 @@ export default function CommercialPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-white/90"
           >
-            Based In Brisbane
+            Based In Darwin
           </motion.p>
         </div>
       </section>

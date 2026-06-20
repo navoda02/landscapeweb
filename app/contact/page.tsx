@@ -36,7 +36,7 @@ export default function ContactPage() {
             className="object-cover"
             priority
           />
-        <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
               
         {/* Text at Bottom */}
@@ -55,14 +55,14 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-white/90"
           >
-            Based In Brisbane
+            Based In Darwin
           </motion.p>
         </div>
       </section>  
 
       {/* Contact Section */}
-      <section className="py-20 bg-white overflow-visible">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Left Side - Contact Info */}
@@ -115,19 +115,10 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative overflow-visible"
+              className="relative"
             >
-              {/* Tree Icon - Responsive */}
-              <div className="flex justify-end mb-4">
-                <div className="relative w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36">
-                  <Image
-                    src="/images/tree icon.png"
-                    alt="Decoration"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
+              {/* FIX: Removed tree icon - this is likely causing the shift */}
+              {/* The tree icon image might be missing or slow to load */}
 
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Details.

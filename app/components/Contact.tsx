@@ -29,7 +29,7 @@ export default function AboutSection() {
             className="relative overflow-visible"
           >
             {/* Image in Top Right Corner - Responsive */}
-            <div className="flex justify-end mb-4">
+            {/* <div className="flex justify-end mb-4">
               <div className="relative w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32">
                 <Image
                   src="/images/that.png"
@@ -38,7 +38,7 @@ export default function AboutSection() {
                   className="object-contain"
                 />
               </div>
-            </div>
+            </div> */}
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Our Landscaping Services

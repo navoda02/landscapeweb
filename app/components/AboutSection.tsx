@@ -44,7 +44,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-              At ScapeX, we specialize in creating and maintaining beautiful,
+              At ScapeX NT, we specialize in creating and maintaining beautiful,
               functional outdoor spaces. Our team offers a range of landscaping
               services, including lawn care, custom designs, tree and shrub care,
               and vibrant flower bed installations. We work closely with you

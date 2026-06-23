@@ -45,7 +45,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-              At ScapeX, we offer a wide range of expert landscaping services tailored to enhance the beauty and functionality of your outdoor space. From lawn care
+              At ScapeX NT, we offer a wide range of expert landscaping services tailored to enhance the beauty and functionality of your outdoor space. From lawn care
               and custom designs to tree health management and flower bed maintenance, our team is dedicated to bringing your vision to life with professional care
               and attention to detail. Whether you're looking to revamp your entire garden or need regular upkeep, we provide reliable solutions that suit your needs.
             </p>

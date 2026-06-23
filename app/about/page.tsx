@@ -77,7 +77,7 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Founded in 2010, ScapeX has been a family-owned business, committed to creating sustainable 
+                Founded in 2020, ScapeX NT has been a family-owned business, committed to creating sustainable 
                 and beautiful gardens that last. Based in Brisbane, we specialize in custom garden design, 
                 landscaping, and maintenance, delivering personalized services that suit every client's 
                 unique vision. With decades of experience and a deep passion for nature, we continue to 

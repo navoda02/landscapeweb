@@ -11,7 +11,7 @@ export default function Footer() {
           
           {/* Column 1 - Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-green-700 mb-4">ScapeXNT</h3>
+            <h3 className="text-2xl font-bold text-green-700 mb-4">ScapeX NT</h3>
             <div className="space-y-3 text-gray-600 text-sm">
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-green-700" /> (07) 1234 5678
@@ -78,7 +78,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500 text-sm">
-          <p>© 2020 ScapeXNT. All rights reserved.</p>
+          <p>© 2020 ScapeX NT. All rights reserved.</p>
         </div>
       </div>
     </footer>

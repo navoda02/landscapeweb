@@ -76,7 +76,7 @@ export default function ServicesPage() {
                 Our Lawn Care & Landscaping Services
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                At ScapeX, we provide a wide range of professional lawn care and landscaping services designed 
+                At ScapeX NT, we provide a wide range of professional lawn care and landscaping services designed 
                 to keep your garden in top shape year-round. With years of experience and a dedicated team of 
                 experts, we're committed to making your outdoor space beautiful and healthy. Here are a few 
                 key facts about our services:
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                 <div className="border-l-4 border-green-700 pl-4">
                   <div className="text-3xl sm:text-4xl font-bold text-green-700">200</div>
                   <p className="text-gray-600 text-sm">
-                    Over 200 unique landscape designs created for satisfied customers across Brisbane.
+                    Over 200 unique landscape designs created for satisfied customers across Darwwin.
                   </p>
                 </div>
                 <div className="border-l-4 border-green-700 pl-4">

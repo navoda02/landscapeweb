@@ -44,10 +44,7 @@ export default function Header() {
             </div>
             <div className="ml-2 flex items-baseline">
               <span className="text-xl md:text-2xl font-bold text-green-800 transition-colors duration-300 group-hover:text-green-600">
-                Scape
-              </span>
-              <span className="text-xl md:text-2xl font-bold text-green-800 transition-colors duration-300 group-hover:text-green-600">
-                XNT
+                ScapeX NT
               </span>
             </div>
           </Link>

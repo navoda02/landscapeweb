@@ -33,12 +33,12 @@ export default function TransformSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Garden with ScapeX
+              Transform Your Garden with ScapeX NT
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Based in Brisbane and the surrounding areas, ScapeX offers expert lawn care and maintenance, 
-              landscape design and installation, and flower bed design and maintenance. With over 10 years 
-              of experience, ScapeX has transformed hundreds of gardens, creating stunning outdoor spaces 
+              Based in Brisbane and the surrounding areas, ScapeX NT offers expert lawn care and maintenance, 
+              landscape design and installation, and flower bed design and maintenance. With over 6 years 
+              of experience, ScapeX NT has transformed hundreds of gardens, creating stunning outdoor spaces 
               tailored to each client's needs.
             </p>
             
